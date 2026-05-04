@@ -18,139 +18,78 @@
             --danger: #ef4444;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
-            line-height: 1.6;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; justify-content: center; padding: 40px 20px; line-height: 1.6; }
         .container { max-width: 680px; width: 100%; }
         .header { margin-bottom: 48px; }
-        .logo {
-            font-size: 14px; font-weight: 500; color: var(--accent);
-            letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;
-        }
+        .logo { font-size: 14px; font-weight: 500; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
         .title { font-size: 28px; font-weight: 600; letter-spacing: -0.5px; color: #fff; }
         .subtitle { font-size: 15px; color: var(--text-secondary); margin-top: 6px; }
-        .card {
-            background: var(--card-bg); border: 1px solid var(--border);
-            border-radius: 16px; padding: 28px 32px; margin-bottom: 20px;
-        }
-        .card-title {
-            font-size: 13px; font-weight: 600; color: var(--text-secondary);
-            text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;
-        }
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 28px 32px; margin-bottom: 20px; }
+        .card-title { font-size: 13px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .form-group { display: flex; flex-direction: column; }
         .form-group.full { grid-column: 1 / -1; }
         label { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; font-weight: 500; }
-        input {
-            background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
-            padding: 12px 14px; color: #fff; font-size: 15px; font-family: inherit;
-            outline: none; transition: border-color 0.2s;
-        }
+        input { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; color: #fff; font-size: 15px; font-family: inherit; outline: none; transition: border-color 0.2s; }
         input:focus { border-color: var(--accent); }
-        .btn {
-            background: #fff; color: #000; border: none; border-radius: 10px;
-            padding: 12px 24px; font-size: 14px; font-weight: 600; cursor: pointer;
-            font-family: inherit; transition: opacity 0.2s;
-        }
+        .btn { background: #fff; color: #000; border: none; border-radius: 10px; padding: 12px 24px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; transition: opacity 0.2s; }
         .btn:active { opacity: 0.7; }
         .btn-block { width: 100%; margin-top: 8px; }
-        .alert {
-            border-radius: 10px; padding: 16px 20px; margin-bottom: 16px;
-            font-size: 14px; font-weight: 500;
-        }
-        .alert-green {
-            background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3);
-            color: var(--green);
-        }
-        .alert-yellow {
-            background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3);
-            color: var(--yellow);
-        }
-        .alert-red {
-            background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.3);
-            color: var(--red); animation: pulse 1.5s infinite;
-        }
+        .alert { border-radius: 10px; padding: 16px 20px; margin-bottom: 16px; font-size: 14px; font-weight: 500; }
+        .alert-green { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.3); color: var(--green); }
+        .alert-yellow { background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3); color: var(--yellow); }
+        .alert-red { background: rgba(248,113,113,0.1); border: 1px solid rgba(248,113,113,0.3); color: var(--red); animation: pulse 1.5s infinite; }
         @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
-        .fee-item {
-            display: flex; justify-content: space-between; align-items: flex-start;
-            padding: 14px 0; border-bottom: 1px solid var(--border);
-        }
+        .fee-item { display: flex; justify-content: space-between; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--border); }
         .fee-name { font-weight: 500; font-size: 14px; }
         .fee-amount { font-weight: 700; font-size: 18px; color: var(--danger); }
-        .fee-explanation {
-            font-size: 12px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5;
-        }
+        .fee-explanation { font-size: 12px; color: var(--text-secondary); margin-top: 4px; line-height: 1.5; }
         .empty-state { text-align: center; color: var(--text-secondary); padding: 40px 0; font-size: 14px; }
-        .privacy {
-            display: flex; align-items: center; gap: 8px; font-size: 11px;
-            color: var(--text-secondary); margin-top: 24px; justify-content: center;
-        }
+        .privacy { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--text-secondary); margin-top: 24px; justify-content: center; }
         .privacy-dot { width: 6px; height: 6px; background: var(--green); border-radius: 50%; }
-        .donate-area {
-            text-align: center; margin-top: 20px; padding: 20px;
-            border-top: 1px solid var(--border);
-        }
+        .donate-area { text-align: center; margin-top: 20px; padding: 20px; border-top: 1px solid var(--border); }
         .donate-area img { width: 180px; border-radius: 12px; margin: 12px 0; }
         .donate-text { font-size: 14px; color: var(--text-secondary); margin-bottom: 8px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">BillSight</div>
-            <div class="title">信用卡账单透视</div>
-            <div class="subtitle">一眼看懂账单里每一分钱</div>
+<div class="container">
+    <div class="header"><div class="logo">BillSight</div><div class="title">信用卡账单透视</div><div class="subtitle">一眼看懂账单里每一分钱</div></div>
+    <div class="card"><div class="card-title">?? 录入本期账单</div>
+        <div class="form-grid">
+            <div class="form-group"><label>账单金额 (元)</label><input type="number" id="billAmount" placeholder="例如 5680.50" step="0.01"></div>
+            <div class="form-group"><label>还款日</label><input type="date" id="dueDate"></div>
+            <div class="form-group"><label>最低还款额 (元)</label><input type="number" id="minPayment" placeholder="例如 568.05" step="0.01"></div>
+            <div class="form-group"><label>本期应还总额 (元)</label><input type="number" id="totalDue" placeholder="例如 5800.50" step="0.01"></div>
+            <div class="form-group full"><button class="btn btn-block" onclick="analyzeBill()">?? 分析账单</button></div>
         </div>
-        <div class="card">
-            <div class="card-title">📋 录入本期账单</div>
-            <div class="form-grid">
-                <div class="form-group"><label>账单金额 (元)</label><input type="number" id="billAmount" placeholder="例如 5680.50" step="0.01"></div>
-                <div class="form-group"><label>还款日</label><input type="date" id="dueDate"></div>
-                <div class="form-group"><label>最低还款额 (元)</label><input type="number" id="minPayment" placeholder="例如 568.05" step="0.01"></div>
-                <div class="form-group"><label>本期应还总额 (元)</label><input type="number" id="totalDue" placeholder="例如 5800.50" step="0.01"></div>
-                <div class="form-group full"><button class="btn btn-block" onclick="analyzeBill()">🔍 分析账单</button></div>
-            </div>
-        </div>
-        <div id="alertBanner"></div>
-        <div class="card" id="feesCard">
-            <div class="card-title">⚠️ 可疑费用标记</div>
-            <div id="feesList"><div class="empty-state">请先录入账单，然后点击"分析账单"</div></div>
-        </div>
-        <div class="donate-area">
-            <div class="donate-text">☕ 觉得有用？请我喝杯咖啡</div>
-            <img src="https://scx0319.github.io/billsight-app/billight_qrcode.png" alt="赞赏码">
-            <div style="font-size:12px; color:#888; margin-top:8px;">扫码打赏，金额随意<br>你的支持是我持续优化的动力</div>
-        </div>
-        <div class="privacy"><div class="privacy-dot"></div>所有数据仅存储在您的设备本地，不上传任何服务器</div>
     </div>
-    <script>
-        window.onload=function(){var d=localStorage.getItem('billsight_data');if(d){d=JSON.parse(d);document.getElementById('billAmount').value=d.billAmount||'';document.getElementById('dueDate').value=d.dueDate||'';document.getElementById('minPayment').value=d.minPayment||'';document.getElementById('totalDue').value=d.totalDue||'';if(d.billAmount&&d.dueDate)analyzeBill();}};
-        function saveData(){localStorage.setItem('billsight_data',JSON.stringify({billAmount:document.getElementById('billAmount').value,dueDate:document.getElementById('dueDate').value,minPayment:document.getElementById('minPayment').value,totalDue:document.getElementById('totalDue').value}));}
-        function analyzeBill(){
-            saveData();
-            var a=parseFloat(document.getElementById('billAmount').value)||0,
-                d=document.getElementById('dueDate').value,
-                m=parseFloat(document.getElementById('minPayment').value)||0,
-                t=parseFloat(document.getElementById('totalDue').value)||0;
-            if(!a||!d){alert('请至少填写账单金额和还款日');return;}
-            var fees=[];
-            if(t>a&&a>0)fees.push({name:'循环利息',amount:(t-a),explanation:'上期未全额还清，银行从消费日按日息万分之五计算。'+(t-a).toFixed(2)+'元就是累积的利息。全额还款可避免。'});
-            if(m>0&&t>0&&m/t<0.1)fees.push({name:'最低还款陷阱',amount:(t-m),explanation:'最低还款仅占'+(m/t*100).toFixed(0)+'%。还最低后，剩余部分按日息万分之五计息，长期可能超过本金。建议全额还款。'});
-            document.getElementById('feesList').innerHTML=fees.length?fees.map(function(i){return '<div class="fee-item"><div><div class="fee-name">'+i.name+'</div><div class="fee-explanation">'+i.explanation+'</div></div><div class="fee-amount">¥'+i.amount.toFixed(2)+'</div></div>';}).join(''):'<div style="text-align:center;color:#34d399;padding:20px 0;">✅ 暂未发现可疑收费</div>';
-            var due=new Date(d+'T00:00:00'),now=new Date(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate()),
-                diff=Math.ceil((due-today)/86400000),b=document.getElementById('alertBanner');
-            if(diff<0)b.innerHTML='<div class="alert alert-red">🚨 已逾期 '+Math.abs(diff)+' 天！请立即联系银行，尽快还款避免影响征信。</div>';
-            else if(diff===0)b.innerHTML='<div class="alert alert-red">🔴 今天就是最后还款日！立即还款避免逾期！应还 ¥'+t.toFixed(2)+'</div>';
-            else if(diff<=3)b.innerHTML='<div class="alert alert-yellow">🟡 还有 '+diff+' 天到还款日，应还 ¥'+t.toFixed(2)+'，请提前准备资金</div>';
-            else b.innerHTML='<div class="alert alert-green">🟢 距离还款日还有 '+diff+' 天，账单状态正常，应还 ¥'+t.toFixed(2)+'</div>';
-        }
-    </script>
+    <div id="alertBanner"></div>
+    <div class="card" id="feesCard"><div class="card-title">?? 可疑费用标记</div><div id="feesList"><div class="empty-state">请先录入账单，然后点击"分析账单"</div></div></div>
+    <div class="donate-area">
+        <div class="donate-text">? 觉得有用？请我喝杯咖啡</div>
+        <img src="https://scx0319.github.io/billsight-app/billsight_qrcode.jpg" alt="赞赏码" style="width:180px; border-radius:12px;">
+        <div style="font-size:12px; color:#888; margin-top:8px;">扫码打赏，金额随意<br>你的支持是我持续优化的动力</div>
+    </div>
+    <div class="privacy"><div class="privacy-dot"></div>所有数据仅存储在您的设备本地，不上传任何服务器</div>
+</div>
+<script>
+window.onload=function(){var d=localStorage.getItem('billsight_data');if(d){d=JSON.parse(d);document.getElementById('billAmount').value=d.billAmount||'';document.getElementById('dueDate').value=d.dueDate||'';document.getElementById('minPayment').value=d.minPayment||'';document.getElementById('totalDue').value=d.totalDue||'';if(d.billAmount&&d.dueDate)analyzeBill();}};
+function saveData(){localStorage.setItem('billsight_data',JSON.stringify({billAmount:document.getElementById('billAmount').value,dueDate:document.getElementById('dueDate').value,minPayment:document.getElementById('minPayment').value,totalDue:document.getElementById('totalDue').value}));}
+function analyzeBill(){
+    saveData();
+    var a=parseFloat(document.getElementById('billAmount').value)||0,d=document.getElementById('dueDate').value,m=parseFloat(document.getElementById('minPayment').value)||0,t=parseFloat(document.getElementById('totalDue').value)||0;
+    if(!a||!d){alert('请至少填写账单金额和还款日');return;}
+    var fees=[];
+    if(t>a&&a>0)fees.push({name:'循环利息',amount:(t-a),explanation:'上期未全额还清，银行从消费日按日息万分之五计算。'+(t-a).toFixed(2)+'元就是累积的利息。全额还款可避免。'});
+    if(m>0&&t>0&&m/t<0.1)fees.push({name:'最低还款陷阱',amount:(t-m),explanation:'最低还款仅占'+(m/t*100).toFixed(0)+'%。还最低后，剩余部分按日息万分之五计息，长期可能超过本金。建议全额还款。'});
+    document.getElementById('feesList').innerHTML=fees.length?fees.map(function(i){return '<div class="fee-item"><div><div class="fee-name">'+i.name+'</div><div class="fee-explanation">'+i.explanation+'</div></div><div class="fee-amount">￥'+i.amount.toFixed(2)+'</div></div>';}).join(''):'<div style="text-align:center;color:#34d399;padding:20px 0;">? 暂未发现可疑收费</div>';
+    var due=new Date(d+'T00:00:00'),now=new Date(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate()),diff=Math.ceil((due-today)/86400000),b=document.getElementById('alertBanner');
+    if(diff<0)b.innerHTML='<div class="alert alert-red">?? 已逾期 '+Math.abs(diff)+' 天！请立即联系银行，尽快还款避免影响征信。</div>';
+    else if(diff===0)b.innerHTML='<div class="alert alert-red">?? 今天就是最后还款日！立即还款避免逾期！应还 ￥'+t.toFixed(2)+'</div>';
+    else if(diff<=3)b.innerHTML='<div class="alert alert-yellow">?? 还有 '+diff+' 天到还款日，应还 ￥'+t.toFixed(2)+'，请提前准备资金</div>';
+    else b.innerHTML='<div class="alert alert-green">?? 距离还款日还有 '+diff+' 天，账单状态正常，应还 ￥'+t.toFixed(2)+'</div>';
+}
+</script>
 </body>
 </html>
